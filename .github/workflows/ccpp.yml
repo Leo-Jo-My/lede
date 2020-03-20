@@ -74,9 +74,7 @@ jobs:
       - name: Custom profile 8
         run: |   
           sed -i '53s/\(.\{1\}\)/\#/' package/network/services/uhttpd/files/uhttpd.init
-      - name: Custom profile 9
-        run: |
-          sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
+  
       - name: Custom profile 10
         run: |
           sed -i 's/default "5"/default "0"/g' config/Config-images.in
